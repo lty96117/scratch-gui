@@ -57,6 +57,6 @@
     line-height: $menu-bar-height; 
     cursor: pointer;
     text-decoration: none;
-    color: $motion-tertiary;
+    /*color: $motion-tertiary;*/
     user-select: none;
 }

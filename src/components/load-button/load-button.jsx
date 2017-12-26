@@ -14,24 +14,24 @@ const LoadButtonComponent = ({
     ...props
 }) => (
     <span {...props}>
-        <ComingSoonTooltip
-            place="bottom"
-            tooltipId="load-button"
-        >
+        {/*<ComingSoonTooltip*/}
+            {/*place="bottom"*/}
+            {/*tooltipId="load-button"*/}
+        {/*>*/}
             <ButtonComponent
-                disabled
+                // disabled
                 onClick={onClick}
             >
                 {title}
             </ButtonComponent>
             <input
-                disabled
+                // disabled
                 className={styles.fileInput}
                 ref={inputRef}
                 type="file"
                 onChange={onChange}
             />
-        </ComingSoonTooltip>
+        {/*</ComingSoonTooltip>*/}
     </span>
 );
 

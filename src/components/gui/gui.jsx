@@ -65,9 +65,9 @@ const GUIComponent = props => {
             className={styles.pageWrapper}
             {...componentProps}
         >
-            {previewInfoVisible ? (
-                <PreviewModal />
-            ) : null}
+            {/*{previewInfoVisible ? (*/}
+                {/*<PreviewModal />*/}
+            {/*) : null}*/}
             <MenuBar />
             <Box className={styles.bodyWrapper}>
                 <Box className={styles.flexWrapper}>
