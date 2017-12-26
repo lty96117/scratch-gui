@@ -16,6 +16,9 @@ class LoadButton extends React.Component {
     ]);
   }
 
+  openModal = () => {
+    console.log('hello');
+  };
 
   handleChange(e) {
     const reader = new FileReader();
@@ -43,6 +46,7 @@ class LoadButton extends React.Component {
         inputRef={this.setFileInput}
         onChange={this.handleChange}
         onClick={this.handleClick}
+        openModal={this.openModal}
         {...props}
       />
     );
