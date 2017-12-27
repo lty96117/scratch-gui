@@ -22,7 +22,6 @@ import MenuBar from '../menu-bar/menu-bar.jsx';
 import layout from '../../lib/layout-constants.js';
 import styles from './gui.css';
 import addExtensionIcon from './icon--extensions.svg';
-
 const addExtensionMessage = (
     <FormattedMessage
         defaultMessage="Extensions"

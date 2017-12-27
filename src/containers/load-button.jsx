@@ -14,10 +14,27 @@ class LoadButton extends React.Component {
       'handleChange',
       'handleClick'
     ]);
+    this.state = {
+      loadModalOpen: false
+    }
   }
 
-  openModal = () => {
-    console.log('hello');
+  handleModalOpen = () => {
+    console.log(this.setState({
+      loadModalOpen: true
+    }));
+  };
+
+  handleModalOk = (e) => {
+    this.setState({
+      loadModalOpen: false
+    });
+  };
+
+  handleModalCancel = (e) => {
+    this.setState({
+      loadModalOpen: false
+    });
   };
 
   handleChange(e) {
@@ -28,8 +45,8 @@ class LoadButton extends React.Component {
 
   handleClick() {
     // this.fileInput.click();
-    this.props.loadProject(JSON.stringify(JSONTest))
-
+    // this.props.loadProject(JSON.stringify(JSONTest));
+    this.handleModalOpen();
   }
 
   setFileInput(input) {
@@ -46,7 +63,10 @@ class LoadButton extends React.Component {
         inputRef={this.setFileInput}
         onChange={this.handleChange}
         onClick={this.handleClick}
-        openModal={this.openModal}
+        openModal={this.handleModalOpen}
+        onOk={this.handleModalOk}
+        onCancel={this.handleModalCancel}
+        loadModalOpen={this.state.loadModalOpen}
         {...props}
       />
     );
