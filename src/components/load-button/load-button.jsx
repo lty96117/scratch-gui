@@ -3,7 +3,7 @@ import React from 'react';
 
 import ButtonComponent from '../button/button.jsx';
 import styles from './load-button.css';
-import LoadModal from "../../containers/LoadModal";
+import LoadModal from "../antd/LoadModal";
 
 const LoadButtonComponent = ({
                                inputRef,
@@ -16,9 +16,10 @@ const LoadButtonComponent = ({
                                ...props
                              }) => (
   <div {...props}>
-    <LoadModal visible={loadModalOpen}
-               onOk={onOk}
-               onCancel={onCancel}
+    <LoadModal
+      visible={loadModalOpen}
+      onOk={onOk}
+      onCancel={onCancel}
 
     />
     <ButtonComponent
